@@ -11,6 +11,8 @@ namespace AngryKoala.PlayerControls
 
         [SerializeField] private Rigidbody playerRigidbody;
         public Rigidbody PlayerRigidbody => playerRigidbody;
+        [SerializeField] private Animator playerAnimator;
+        public Animator PlayerAnimator => playerAnimator;
 
         [SerializeField] private float maxMoveSpeed;
         private float currentMoveSpeed;
@@ -87,6 +89,8 @@ namespace AngryKoala.PlayerControls
             {
                 StopMovement();
             }
+
+            playerAnimator.SetBool("IsMoving", isMoving);
         }
 
         private void Move()
