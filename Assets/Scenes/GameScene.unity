@@ -233,6 +233,7 @@ MonoBehaviour:
   visual: {fileID: 1511370004}
   playerRigidbody: {fileID: 1236440631}
   maxMoveSpeed: 5
+  rotationSpeed: 10
 --- !u!1 &1478855459
 GameObject:
   m_ObjectHideFlags: 0

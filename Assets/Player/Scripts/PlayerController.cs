@@ -1,4 +1,5 @@
 using UnityEngine;
+using AngryKoala.Extensions;
 using AngryKoala.Inputs;
 
 namespace AngryKoala.PlayerControls
@@ -14,6 +15,9 @@ namespace AngryKoala.PlayerControls
         [SerializeField] private float maxMoveSpeed;
         private float currentMoveSpeed;
         public float CurrentMoveSpeed => currentMoveSpeed;
+
+        [SerializeField] private float rotationSpeed;
+        public float RotationSpeed => rotationSpeed;
 
         private Vector3 moveDirection;
         public Vector3 MoveDirection => moveDirection;
@@ -33,6 +37,7 @@ namespace AngryKoala.PlayerControls
             if(IsControllable)
             {
                 HandleMovement();
+                HandleRotation();
             }
         }
 
@@ -87,6 +92,18 @@ namespace AngryKoala.PlayerControls
         private void Move()
         {
             playerRigidbody.MovePosition(playerRigidbody.position + (moveDirection * currentMoveSpeed * Time.fixedDeltaTime));
+        }
+
+        #endregion
+
+        #region Rotation
+
+        private void HandleRotation()
+        {
+            if(InputManager.Instance.InputAreas[0].IsTouching)
+            {
+                transform.LookAtGradually(transform.position + moveDirection, rotationSpeed * Time.deltaTime, true);
+            }
         }
 
         #endregion
