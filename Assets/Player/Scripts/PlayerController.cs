@@ -67,7 +67,6 @@ namespace AngryKoala.PlayerControls
             isMoving = false;
         }
 
-        //Move komutu
         private void HandleMovement()
         {
             if(InputManager.Instance.InputAreas[0].IsTouching)

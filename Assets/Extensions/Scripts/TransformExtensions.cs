@@ -6,124 +6,124 @@ namespace AngryKoala.Extensions
     public static class TransformExtensions
     {
         /// <summary>
-        /// Transform'un x pozisyonunu setler
+        /// Sets x position of the transform
         /// </summary>
-        /// <param name="x">X degeri.</param>
+        /// <param name="x">x value</param>
         public static void SetX(this Transform transform, float x)
         {
             transform.position = new Vector3(x, transform.position.y, transform.position.z);
         }
 
         /// <summary>
-        /// Transform'un y pozisyonunu setler
+        /// Sets y position of the transform
         /// </summary>
-        /// <param name="y">Y degeri.</param>
+        /// <param name="y">y value</param>
         public static void SetY(this Transform transform, float y)
         {
             transform.position = new Vector3(transform.position.x, y, transform.position.z);
         }
 
         /// <summary>
-        /// Transform'un z pozisyonunu setler
+        /// Sets z position of the transform
         /// </summary>
-        /// <param name="z">Z degeri.</param>
+        /// <param name="z">z value</param>
         public static void SetZ(this Transform transform, float z)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, z);
         }
 
         /// <summary>
-        /// Transform'un x ve y pozisyonunu setler
+        /// Sets x and y position of the transform
         /// </summary>
-        /// <param name="x">X degeri.</param>
-        /// <param name="y">Y degeri.</param>
+        /// <param name="x">x value</param>
+        /// <param name="y">y value</param>
         public static void SetXY(this Transform transform, float x, float y)
         {
             transform.position = new Vector3(x, y, transform.position.z);
         }
 
         /// <summary>
-        /// Transform'un x ve z pozisyonunu setler
+        /// Sets x and z position of the transform
         /// </summary>
-        /// <param name="x">X degeri.</param>
-        /// <param name="z">Z degeri.</param>
+        /// <param name="x">x value</param>
+        /// <param name="z">z value</param>
         public static void SetXZ(this Transform transform, float x, float z)
         {
             transform.position = new Vector3(x, transform.position.y, z);
         }
 
         /// <summary>
-        /// Transform'un y ve z pozisyonunu setler
+        /// Sets y and z position of the transform
         /// </summary>
-        /// <param name="y">Y degeri.</param>
-        /// <param name="z">Z degeri.</param>
+        /// <param name="y">y value</param>
+        /// <param name="z">z value</param>
         public static void SetYZ(this Transform transform, float y, float z)
         {
             transform.position = new Vector3(transform.position.x, y, z);
         }
 
         /// <summary>
-        /// Transform'un local x pozisyonunu setler
+        /// Sets local x position of the transform
         /// </summary>
-        /// <param name="x">X degeri.</param>
+        /// <param name="x">x value</param>
         public static void SetLocalX(this Transform transform, float x)
         {
             transform.localPosition = new Vector3(x, transform.localPosition.y, transform.localPosition.z);
         }
 
         /// <summary>
-        /// Transform'un local y pozisyonunu setler
+        /// Sets local y position of the transform
         /// </summary>
-        /// <param name="y">Y degeri.</param>
+        /// <param name="y">y value</param>
         public static void SetLocalY(this Transform transform, float y)
         {
             transform.localPosition = new Vector3(transform.localPosition.x, y, transform.localPosition.z);
         }
 
         /// <summary>
-        /// Transform'un local z pozisyonunu setler
+        /// Sets local z position of the transform
         /// </summary>
-        /// <param name="z">Z degeri.</param>
+        /// <param name="z">z value</param>
         public static void SetLocalZ(this Transform transform, float z)
         {
             transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, z);
         }
 
         /// <summary>
-        /// Transform'un local x ve y pozisyonunu setler
+        /// Sets local x and y position of the transform
         /// </summary>
-        /// <param name="x">X degeri.</param>
-        /// <param name="y">Y degeri.</param>
+        /// <param name="x">x value</param>
+        /// <param name="y">y value</param>
         public static void SetLocalXY(this Transform transform, float x, float y)
         {
             transform.localPosition = new Vector3(x, y, transform.localPosition.z);
         }
 
         /// <summary>
-        /// Transform'un local x ve z pozisyonunu setler
+        /// Sets local x and z position of the transform
         /// </summary>
-        /// <param name="x">X degeri.</param>
-        /// <param name="z">Z degeri.</param>
+        /// <param name="x">x value</param>
+        /// <param name="z">z value</param>
         public static void SetLocalXZ(this Transform transform, float x, float z)
         {
             transform.localPosition = new Vector3(x, transform.localPosition.y, z);
         }
 
         /// <summary>
-        /// Transform'un local y ve z pozisyonunu setler
+        /// Sets local y and z position of the transform
         /// </summary>
-        /// <param name="y">Y degeri.</param>
-        /// <param name="z">Z degeri.</param>
+        /// <param name="y">y value</param>
+        /// <param name="z">z value</param>
         public static void SetLocalYZ(this Transform transform, float y, float z)
         {
             transform.localPosition = new Vector3(transform.localPosition.x, y, z);
         }
 
         /// <summary>
-        /// Transform'un pozisyonunu ve rotasyonunu setler
+        /// Sets position and rotation of the transform
         /// </summary>
-        /// <param name="v"></param>
-        /// <param name="x"></param>
+        /// <param name="position"></param>
+        /// <param name="rotation"></param>
         /// <returns></returns>
         public static void PosRot(this Transform transform, Vector3 position, Quaternion rotation)
         {
@@ -132,10 +132,10 @@ namespace AngryKoala.Extensions
         }
 
         /// <summary>
-        /// Transform'un pozisyonunu ve scale'ini setler
+        /// Sets position and scale of the transform
         /// </summary>
-        /// <param name="v"></param>
-        /// <param name="x"></param>
+        /// <param name="position"></param>
+        /// <param name="scale"></param>
         /// <returns></returns>
         public static void PosScale(this Transform transform, Vector3 position, Vector3 scale)
         {
@@ -144,10 +144,10 @@ namespace AngryKoala.Extensions
         }
 
         /// <summary>
-        /// Transform'un rotasyonunu ve scale'ini setler
+        /// Sets rotation and scale of the transform
         /// </summary>
-        /// <param name="v"></param>
-        /// <param name="x"></param>
+        /// <param name="rotation"></param>
+        /// <param name="scale"></param>
         /// <returns></returns>
         public static void RotScale(this Transform transform, Quaternion rotation, Vector3 scale)
         {
@@ -156,10 +156,11 @@ namespace AngryKoala.Extensions
         }
 
         /// <summary>
-        /// Transform'un pozisyonunu, rotasyonunu ve scale'ini setler
+        /// Sets position, rotation and scale of the transform
         /// </summary>
-        /// <param name="v"></param>
-        /// <param name="x"></param>
+        /// <param name="position"></param>
+        /// <param name="rotation"></param>
+        /// <param name="scale"></param>
         /// <returns></returns>
         public static void PosRotScale(this Transform transform, Vector3 position, Quaternion rotation, Vector3 scale)
         {
@@ -169,7 +170,7 @@ namespace AngryKoala.Extensions
         }
 
         /// <summary>
-        /// Transform'un child'ini bulmak icin recursive bir arama yapar
+        /// Performs a recursive search to find a child of the transform by name
         /// </summary>
         /// <param name="transform"></param>
         /// <param name="name"></param>
@@ -188,7 +189,7 @@ namespace AngryKoala.Extensions
         }
 
         /// <summary>
-        /// Transform'un x yonuyle LookAt yapar
+        /// Performs a LookAt with transform's x direction
         /// </summary>
         public static void LookAtWithX(this Transform transform, Transform target)
         {
@@ -197,7 +198,7 @@ namespace AngryKoala.Extensions
         }
 
         /// <summary>
-        /// Transform'un x yonuyle LookAt yapar
+        /// Performs a LookAt with transform's x direction
         /// </summary>
         public static void LookAtWithX(this Transform transform, Vector3 target)
         {
@@ -206,7 +207,7 @@ namespace AngryKoala.Extensions
         }
 
         /// <summary>
-        /// Transform'un y yonuyle LookAt yapar
+        /// Performs a LookAt with transform's y direction
         /// </summary>
         public static void LookAtWithY(this Transform transform, Transform target)
         {
@@ -215,7 +216,7 @@ namespace AngryKoala.Extensions
         }
 
         /// <summary>
-        /// Transform'un y yonuyle LookAt yapar
+        /// Performs a LookAt with transform's y direction
         /// </summary>
         public static void LookAtWithY(this Transform transform, Vector3 target)
         {
@@ -224,7 +225,7 @@ namespace AngryKoala.Extensions
         }
 
         /// <summary>
-        /// Belirli bir hizla LookAt yapar
+        /// Performs a LookAt with a set speed
         /// </summary>
         public static void LookAtGradually(this Transform transform, Transform target, float maxRadiansDelta, bool stableUpVector = false)
         {
@@ -239,7 +240,7 @@ namespace AngryKoala.Extensions
         }
 
         /// <summary>
-        /// Belirli bir hizla LookAt yapar
+        /// Performs a LookAt with a set speed
         /// </summary>
         public static void LookAtGradually(this Transform transform, Vector3 target, float maxRadiansDelta, bool stableUpVector = false)
         {
@@ -254,7 +255,7 @@ namespace AngryKoala.Extensions
         }
 
         /// <summary>
-        /// Belirli bir hizla transform'un x yonuyle LookAt yapar
+        /// Performs a LookAt with a set speed with transform's x direction
         /// </summary>
         public static void LookAtWithXGradually(this Transform transform, Transform target, float maxRadiansDelta)
         {
@@ -265,7 +266,7 @@ namespace AngryKoala.Extensions
         }
 
         /// <summary>
-        /// Belirli bir hizla transform'un x yonuyle LookAt yapar
+        /// Performs a LookAt with a set speed with transform's x direction
         /// </summary>
         public static void LookAtWithXGradually(this Transform transform, Vector3 target, float maxRadiansDelta)
         {
@@ -276,7 +277,7 @@ namespace AngryKoala.Extensions
         }
 
         /// <summary>
-        /// Belirli bir hizla transform'un y yonuyle LookAt yapar
+        /// Performs a LookAt with a set speed with transform's y direction
         /// </summary>
         public static void LookAtWithYGradually(this Transform transform, Transform target, float maxRadiansDelta)
         {
@@ -287,7 +288,7 @@ namespace AngryKoala.Extensions
         }
 
         /// <summary>
-        /// Belirli bir hizla transform'un y yonuyle LookAt yapar
+        /// Performs a LookAt with a set speed with transform's y direction
         /// </summary>
         public static void LookAtWithYGradually(this Transform transform, Vector3 target, float maxRadiansDelta)
         {
