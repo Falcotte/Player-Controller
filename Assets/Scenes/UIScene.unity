@@ -459,24 +459,13 @@ MonoBehaviour:
   - {fileID: 694898868}
   inputAreaIndex: 0
   touchPos: {x: 0, y: 0}
-  touchPosAreaPercent: {x: 0, y: 0}
-  touchPosScreenPercent: {x: 0, y: 0}
   horizontal: 0
   horizontalRaw: 0
   vertical: 0
   verticalRaw: 0
   direction: {x: 0, y: 0}
   directionRaw: {x: 0, y: 0}
-  drag: {x: 0, y: 0}
-  dragCm: {x: 0, y: 0}
-  dragAreaPercent: {x: 0, y: 0}
-  dragScreenPercent: {x: 0, y: 0}
-  dragDelta: {x: 0, y: 0}
-  dragDeltaCm: {x: 0, y: 0}
-  dragDeltaAreaPercent: {x: 0, y: 0}
-  dragDeltaScreenPercent: {x: 0, y: 0}
   isTouching: 0
-  isDragging: 0
 --- !u!1 &1871159210
 GameObject:
   m_ObjectHideFlags: 0
