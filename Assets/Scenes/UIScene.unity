@@ -291,9 +291,9 @@ MonoBehaviour:
   touchPadPrefab: {fileID: 8201028789637817434, guid: a2a324715bc02d64f9de6ec674098b0f, type: 3}
   touchpadType: 1
   followTouch: 1
-  touchpadBehaviour: 0
+  touchpadBehaviour: 1
   instantReturn: 0
-  returnSpeed: 0
+  returnSpeed: 1000
   hideOnPointerUp: 1
   activeColor: {r: 1, g: 1, b: 1, a: 1}
   inactiveColor: {r: 1, g: 1, b: 1, a: 0}

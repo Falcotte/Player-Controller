@@ -49,8 +49,6 @@ namespace AngryKoala.Inputs
         public UnityAction OnTouchUp;
         public UnityAction OnTouch;
 
-        public UnityAction OnDrag;
-
         #endregion
 
         private void Start()
