@@ -14,6 +14,9 @@ namespace AngryKoala.PlayerControls
         [SerializeField] private Animator playerAnimator;
         public Animator PlayerAnimator => playerAnimator;
 
+        [SerializeField] private ParticleSystem moveParticles;
+        private ParticleSystem.EmissionModule moveEmission;
+
         [SerializeField] private float maxMoveSpeed;
         private float currentMoveSpeed;
         public float CurrentMoveSpeed => currentMoveSpeed;
@@ -32,6 +35,8 @@ namespace AngryKoala.PlayerControls
         private void Start()
         {
             IsControllable = true;
+
+            moveEmission = moveParticles.emission;
         }
 
         private void Update()
@@ -64,6 +69,8 @@ namespace AngryKoala.PlayerControls
         public void StopMovement()
         {
             currentMoveSpeed = 0f;
+            moveEmission.enabled = false;
+
             isMoving = false;
         }
 
@@ -76,6 +83,7 @@ namespace AngryKoala.PlayerControls
                 if(moveDirection.sqrMagnitude > 0f)
                 {
                     currentMoveSpeed = maxMoveSpeed;
+                    moveEmission.enabled = true;
 
                     isMoving = true;
                 }
