@@ -43,9 +43,9 @@ GameObject:
   - component: {fileID: 5513856428209057621}
   - component: {fileID: 5513856428209057626}
   - component: {fileID: 5513856428209057627}
-  - component: {fileID: 5513856428209057620}
+  - component: {fileID: 7056733521918122077}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerRigidbody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +96,7 @@ CapsuleCollider:
   m_Height: 1.6855576
   m_Direction: 1
   m_Center: {x: -0, y: 0.8427788, z: -0}
---- !u!114 &5513856428209057620
+--- !u!114 &7056733521918122077
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,15 +105,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 5513856428209057624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ebb18cc19cb08e4ea0b004ea928e10b, type: 3}
+  m_Script: {fileID: 11500000, guid: c53ebbf22d4989b47bd156d168972f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   visual: {fileID: 5513856427946447993}
   playerRigidbody: {fileID: 5513856428209057626}
   playerAnimator: {fileID: 4456640631589264780}
   moveParticles: {fileID: 799444078986845222}
-  maxMoveSpeed: 2
   rotationSpeed: 10
+  maxMoveSpeed: 2
 --- !u!1001 &709539771560486294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -272,6 +272,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: b65456a86da7a1e468221bbb676acc4a, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 885758a676ab2f84bb1bc64dd880ef83, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7233867138446155668, guid: 885758a676ab2f84bb1bc64dd880ef83, type: 3}
       propertyPath: m_CastShadows
       value: 2

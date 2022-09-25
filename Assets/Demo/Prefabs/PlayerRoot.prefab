@@ -112,8 +112,8 @@ MonoBehaviour:
   playerRigidbody: {fileID: 6471710824523582075}
   playerAnimator: {fileID: 2921761433468516525}
   moveParticles: {fileID: 2183462583014275335}
-  moveSpeed: 5
   rotationSpeed: 10
+  moveSpeed: 2
 --- !u!1001 &2057528376909824183
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -3,18 +3,18 @@ using AngryKoala.Inputs;
 
 namespace AngryKoala.PlayerControls
 {
-    public class PlayerRootController : PlayerController
+    public class PlayerRigidbodyController : PlayerController
     {
-        [SerializeField] private float moveSpeed;
+        [SerializeField] private float maxMoveSpeed;
+        private float currentMoveSpeed;
+        public float CurrentMoveSpeed => currentMoveSpeed;
 
-        private void LateUpdate()
+        private void FixedUpdate()
         {
-            playerAnimator.speed = moveSpeed;
-
-            transform.position = playerAnimator.transform.position;
-
-            playerAnimator.transform.localPosition = Vector3.zero;
-            playerAnimator.transform.localRotation = Quaternion.identity;
+            if(IsControllable)
+            {
+                Move();
+            }
         }
 
         #region Movement
@@ -27,6 +27,7 @@ namespace AngryKoala.PlayerControls
 
                 if(moveDirection.sqrMagnitude > 0f)
                 {
+                    currentMoveSpeed = maxMoveSpeed;
                     moveEmission.enabled = true;
 
                     isMoving = true;
@@ -44,8 +45,14 @@ namespace AngryKoala.PlayerControls
             playerAnimator.SetBool("IsMoving", isMoving);
         }
 
+        private void Move()
+        {
+            playerRigidbody.MovePosition(playerRigidbody.position + (moveDirection * currentMoveSpeed * Time.fixedDeltaTime));
+        }
+
         protected override void StopMovement()
         {
+            currentMoveSpeed = 0f;
             moveEmission.enabled = false;
 
             isMoving = false;

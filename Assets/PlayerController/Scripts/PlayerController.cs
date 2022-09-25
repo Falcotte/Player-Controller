@@ -6,40 +6,36 @@ namespace AngryKoala.PlayerControls
 {
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] private Transform visual;
+        [SerializeField] protected Transform visual;
         public Transform Visual => visual;
 
-        [SerializeField] private Rigidbody playerRigidbody;
+        [SerializeField] protected Rigidbody playerRigidbody;
         public Rigidbody PlayerRigidbody => playerRigidbody;
-        [SerializeField] private Animator playerAnimator;
+        [SerializeField] protected Animator playerAnimator;
         public Animator PlayerAnimator => playerAnimator;
 
-        [SerializeField] private ParticleSystem moveParticles;
-        private ParticleSystem.EmissionModule moveEmission;
+        [SerializeField] protected ParticleSystem moveParticles;
+        protected ParticleSystem.EmissionModule moveEmission;
 
-        [SerializeField] private float maxMoveSpeed;
-        private float currentMoveSpeed;
-        public float CurrentMoveSpeed => currentMoveSpeed;
-
-        [SerializeField] private float rotationSpeed;
+        [SerializeField] protected float rotationSpeed;
         public float RotationSpeed => rotationSpeed;
 
-        private Vector3 moveDirection;
+        protected Vector3 moveDirection;
         public Vector3 MoveDirection => moveDirection;
 
-        private bool isMoving;
+        protected bool isMoving;
         public bool IsMoving => isMoving;
 
         public bool IsControllable { get; set; }
 
-        private void Start()
+        protected virtual void Start()
         {
             IsControllable = true;
 
             moveEmission = moveParticles.emission;
         }
 
-        private void Update()
+        protected virtual void Update()
         {
             if(IsControllable)
             {
@@ -48,17 +44,12 @@ namespace AngryKoala.PlayerControls
             }
         }
 
-        private void FixedUpdate()
+        protected virtual void HandleMovement()
         {
-            if(IsControllable)
-            {
-                Move();
-            }
+
         }
 
-        #region Movement
-
-        private Vector3 SetMovementDirection(Vector2 direction)
+        protected virtual Vector3 SetMovementDirection(Vector2 direction)
         {
             Vector3 newDirection = Vector3.right * direction.x + Vector3.forward * direction.y;
             newDirection.Normalize();
@@ -66,58 +57,18 @@ namespace AngryKoala.PlayerControls
             return new Vector3(newDirection.x, 0f, newDirection.z);
         }
 
-        public void StopMovement()
+        protected virtual void StopMovement()
         {
-            currentMoveSpeed = 0f;
-            moveEmission.enabled = false;
 
-            isMoving = false;
         }
 
-        private void HandleMovement()
-        {
-            if(InputManager.Instance.InputAreas[0].IsTouching)
-            {
-                moveDirection = SetMovementDirection(InputManager.Instance.InputAreas[0].Direction);
-
-                if(moveDirection.sqrMagnitude > 0f)
-                {
-                    currentMoveSpeed = maxMoveSpeed;
-                    moveEmission.enabled = true;
-
-                    isMoving = true;
-                }
-                else
-                {
-                    StopMovement();
-                }
-            }
-            else
-            {
-                StopMovement();
-            }
-
-            playerAnimator.SetBool("IsMoving", isMoving);
-        }
-
-        private void Move()
-        {
-            playerRigidbody.MovePosition(playerRigidbody.position + (moveDirection * currentMoveSpeed * Time.fixedDeltaTime));
-        }
-
-        #endregion
-
-        #region Rotation
-
-        private void HandleRotation()
+        protected virtual void HandleRotation()
         {
             if(InputManager.Instance.InputAreas[0].IsTouching)
             {
                 transform.LookAtGradually(transform.position + moveDirection, rotationSpeed * Time.deltaTime, true);
             }
         }
-
-        #endregion
     }
 }
 
