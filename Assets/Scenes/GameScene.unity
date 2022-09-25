@@ -363,9 +363,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BindingMode: 4
   m_FollowOffset: {x: 0, y: 9.97, z: -7.18}
-  m_XDamping: 1
-  m_YDamping: 1
-  m_ZDamping: 1
+  m_XDamping: 2
+  m_YDamping: 2
+  m_ZDamping: 2
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
@@ -1148,6 +1148,10 @@ PrefabInstance:
     - target: {fileID: 5513856428209057624, guid: 92ec8b56a04532e459df2e4a8f72a93f, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5513856428209057624, guid: 92ec8b56a04532e459df2e4a8f72a93f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92ec8b56a04532e459df2e4a8f72a93f, type: 3}
