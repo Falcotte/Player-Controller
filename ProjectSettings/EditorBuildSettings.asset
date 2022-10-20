@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Demo/Scenes/RigidbodyControllerDemo.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Demo/Scenes/RootControllerDemo.unity
+    guid: 287edd420d5436541b3902b6bb83ecb0
   m_configObjects: {}
