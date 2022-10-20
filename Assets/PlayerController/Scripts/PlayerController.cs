@@ -77,6 +77,8 @@ namespace AngryKoala.PlayerControls
         {
             collectedCollectables = amount;
             collectedCollectables = Mathf.Max(0, amount);
+
+            UIManager.Instance.UpdateCollectableText(collectedCollectables);
         }
     }
 }
