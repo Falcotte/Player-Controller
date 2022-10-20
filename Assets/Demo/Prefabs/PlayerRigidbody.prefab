@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 5513856428209057626}
   - component: {fileID: 5513856428209057627}
   - component: {fileID: 7056733521918122077}
+  - component: {fileID: 4503559695754416319}
   m_Layer: 0
   m_Name: PlayerRigidbody
   m_TagString: Untagged
@@ -114,6 +115,19 @@ MonoBehaviour:
   moveParticles: {fileID: 799444078986845222}
   rotationSpeed: 10
   maxMoveSpeed: 2
+--- !u!114 &4503559695754416319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5513856428209057624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11418bb8f0db8f1408b055bffa7f0ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 7056733521918122077}
 --- !u!1001 &709539771560486294
 PrefabInstance:
   m_ObjectHideFlags: 0

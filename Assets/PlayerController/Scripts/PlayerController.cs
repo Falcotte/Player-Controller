@@ -28,6 +28,9 @@ namespace AngryKoala.PlayerControls
 
         public bool IsControllable { get; set; }
 
+        private int collectedCollectables;
+        public int CollectedCollectables => collectedCollectables;
+
         protected virtual void Start()
         {
             IsControllable = true;
@@ -68,6 +71,12 @@ namespace AngryKoala.PlayerControls
             {
                 transform.LookAtGradually(transform.position + moveDirection, rotationSpeed * Time.deltaTime, true);
             }
+        }
+
+        public void AdjustCollectedAmount(int amount)
+        {
+            collectedCollectables = amount;
+            collectedCollectables = Mathf.Max(0, amount);
         }
     }
 }
