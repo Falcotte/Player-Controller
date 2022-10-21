@@ -19,7 +19,7 @@ public class UIManager : MonoSingleton<UIManager>
         DOTween.Kill(collectableText.transform);
 
         collectableText.transform.localScale = Vector3.one;
-        collectableText.transform.DOPunchScale(Vector3.one * 1.2f, .2f, 1, 1);
+        collectableText.transform.DOPunchScale(Vector3.one * 1.05f, .2f, 1, 1);
 
         collectableText.text = collectableAmount.ToString();
     }
